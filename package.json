@@ -7,7 +7,10 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "@discordjs/opus": "^0.10.0",
+    "@discordjs/voice": "^0.19.2",
     "discord.js": "^14.14.1",
-    "dotenv": "^16.4.0"
+    "dotenv": "^16.4.0",
+    "libsodium-wrappers": "^0.8.4"
   }
 }

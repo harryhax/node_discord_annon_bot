@@ -1,0 +1,1857 @@
+{
+  "metadata": {
+    "title": "David Allan Coe Controversial and Adult-Content Songs",
+    "artist": "David Allan Coe",
+    "formatBasis": "Same top-level structure as the prior songs JSON: metadata -> eras -> genres -> songs.",
+    "rowCount": 20,
+    "eraCount": 2,
+    "genresPerEra": {
+      "1970-1980": 1,
+      "1980-1990": 1
+    },
+    "songsPerEra": {
+      "1970-1980": 10,
+      "1980-1990": 10
+    },
+    "genreCategoryCount": 2,
+    "contentNotice": "This file preserves sourced uncensored song titles for historical cataloging, but it does not include lyrics, audio links, streaming links, or graphic descriptions.",
+    "scope": {
+      "includedAlbums": [
+        {
+          "name": "Nothing Sacred",
+          "released": "1978-01-08",
+          "includedTrackCount": 10,
+          "reason": "Mail-order independent album described as profane and sexually explicit."
+        },
+        {
+          "name": "Underground Album",
+          "released": "1982",
+          "includedTrackCount": 10,
+          "reason": "Mail-order independent album described as explicit and central to racism/obscenity controversy."
+        }
+      ],
+      "includesLyrics": false,
+      "includesAudioOrStreamingLinks": false,
+      "usesUncensoredTitles": true
+    },
+    "sources": [
+      {
+        "name": "Nothing Sacred album page",
+        "url": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+        "usedFor": "release context and track listing"
+      },
+      {
+        "name": "Underground Album page",
+        "url": "https://en.wikipedia.org/wiki/Underground_Album",
+        "usedFor": "release context, track listing, and racism controversy context"
+      },
+      {
+        "name": "People obituary",
+        "url": "https://people.com/david-allan-coe-dead-8712058",
+        "usedFor": "summary context on controversial underground albums"
+      },
+      {
+        "name": "Entertainment Weekly obituary",
+        "url": "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938",
+        "usedFor": "summary context on controversy"
+      }
+    ],
+    "generatedAt": "2026-05-01T19:39:54.436391+00:00"
+  },
+  "eras": [
+    {
+      "era": "1970-1980",
+      "genres": [
+        {
+          "genre": "Country",
+          "songs": [
+            {
+              "rank": 1,
+              "artist": "David Allan Coe",
+              "song": "Nothing Sacred",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Nothing Sacred",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 1,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 230000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "album title track"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 1 on Nothing Sacred.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              },
+              "plays": 1
+            },
+            {
+              "rank": 2,
+              "artist": "David Allan Coe",
+              "song": "Pussy Whipped Again",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Pussy Whipped Again",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 2,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 209000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "uncensored explicit title"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": true,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 2 on Nothing Sacred.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 3,
+              "artist": "David Allan Coe",
+              "song": "Cum Stains on the Pillow (Where Your Sweet Head Used to Be)",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Cum Stains on the Pillow (Where Your Sweet Head Used to Be)",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 3,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 200000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "Chinga Chavin"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "uncensored explicit title"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": true,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song is listed as the only Nothing Sacred track not written by David Allan Coe.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              },
+              "plays": 1
+            },
+            {
+              "rank": 4,
+              "artist": "David Allan Coe",
+              "song": "Linda Lovelace",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Linda Lovelace",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 4,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 198000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "adult entertainment reference"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 4 on Nothing Sacred.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 5,
+              "artist": "David Allan Coe",
+              "song": "Fuck Aneta Briant",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Fuck Aneta Briant",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 5,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 162000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "uncensored explicit title",
+                "LGBTQ-rights/Anita Bryant historical context"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": true,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This track is tied to Coe's response to Anita Bryant's anti-LGBTQ activism in the 1970s.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 6,
+              "artist": "David Allan Coe",
+              "song": "Jimmy Buffett",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Jimmy Buffett",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 6,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 230000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "artist-feud historical context"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This track relates to a public feud involving Jimmy Buffett and plagiarism accusations around Coe's earlier song Divers Do It Deeper.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 7,
+              "artist": "David Allan Coe",
+              "song": "3 Biggest Lies",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "3 Biggest Lies",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 7,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 124000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "adult-comedy context"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 7 on Nothing Sacred.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 8,
+              "artist": "David Allan Coe",
+              "song": "Whips and Things",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Whips and Things",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 8,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 239000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "adult/sexual-theme title"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 8 on Nothing Sacred.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 9,
+              "artist": "David Allan Coe",
+              "song": "Rails",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Rails",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 9,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 129000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "adult-comedy context"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 9 on Nothing Sacred.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 10,
+              "artist": "David Allan Coe",
+              "song": "Master Bation Blues",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "nothing_sacred_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Master Bation Blues",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Nothing Sacred",
+                "censoredName": "Nothing Sacred",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1978-01-08",
+                "trackNumber": 10,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 230000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "adult/sexual-theme title"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 10 on Nothing Sacred.",
+                  "Nothing Sacred was released in 1978 as an independent mail-order album rather than a mainstream retail release.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Nothing_Sacred_(album)",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              },
+              "plays": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "era": "1980-1990",
+      "genres": [
+        {
+          "genre": "Country",
+          "songs": [
+            {
+              "rank": 1,
+              "artist": "David Allan Coe",
+              "song": "Rock n Roll Fever",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Rock n Roll Fever",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 1,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 190000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "underground/adult-material album context"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 1 on Underground Album.",
+                  "The album was independently distributed through mail order and live-show merchandise rather than standard retail channels.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 2,
+              "artist": "David Allan Coe",
+              "song": "Panheads Forever",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Panheads Forever",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 2,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 189000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "biker-culture context"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 2 on Underground Album.",
+                  "The album was independently distributed through mail order and live-show merchandise rather than standard retail channels.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              },
+              "plays": 1
+            },
+            {
+              "rank": 3,
+              "artist": "David Allan Coe",
+              "song": "Nigger Fucker",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Nigger Fucker",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 3,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 148000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "uncensored explicit title",
+                "uncensored racial slur in title",
+                "racism controversy"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": true,
+                "containsUncensoredOffensiveTitle": true,
+                "containsRacialSlurInTitle": true,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This track is the song most directly associated with racism accusations against Coe.",
+                  "Public summaries describe Coe as claiming the track was written from the perspective of segregationist George Wallace rather than as a first-person endorsement.",
+                  "The entry is included for historical cataloging only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              },
+              "plays": 1
+            },
+            {
+              "rank": 4,
+              "artist": "David Allan Coe",
+              "song": "Coffee",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Coffee",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 4,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 328000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "interracial-relationship historical context"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "Public summaries describe this track as following the album's racism-controversy track with an interracial-romance narrative.",
+                  "Underground Album was released in 1982 as the follow-up to Coe's 1978 adult-comedy album Nothing Sacred.",
+                  "The entry is included for historical cataloging only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              },
+              "plays": 1
+            },
+            {
+              "rank": 5,
+              "artist": "David Allan Coe",
+              "song": "One Monkey",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "One Monkey",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 5,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 194000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "underground/adult-material album context"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 5 on Underground Album.",
+                  "The album was independently distributed through mail order and live-show merchandise rather than standard retail channels.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 6,
+              "artist": "David Allan Coe",
+              "song": "One More Time",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "One More Time",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 6,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 193000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "underground/adult-material album context"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 6 on Underground Album.",
+                  "The album was independently distributed through mail order and live-show merchandise rather than standard retail channels.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              },
+              "plays": 1
+            },
+            {
+              "rank": 7,
+              "artist": "David Allan Coe",
+              "song": "Little Sussie Shallow Throat",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Little Sussie Shallow Throat",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 7,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 177000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "uncensored explicit title",
+                "adult/sexual-theme title"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": true,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 7 on Underground Album.",
+                  "The album was independently distributed through mail order and live-show merchandise rather than standard retail channels.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 8,
+              "artist": "David Allan Coe",
+              "song": "Pick Em, Lick Em, Stick Em",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Pick Em, Lick Em, Stick Em",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 8,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 176000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "adult/sexual-theme title"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": false,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 8 on Underground Album.",
+                  "The album was independently distributed through mail order and live-show merchandise rather than standard retail channels.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            },
+            {
+              "rank": 9,
+              "artist": "David Allan Coe",
+              "song": "Don't Bite the Dick",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Don't Bite the Dick",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 9,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 147000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "uncensored explicit title",
+                "adult/sexual-theme title"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": true,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 9 on Underground Album.",
+                  "The album was independently distributed through mail order and live-show merchandise rather than standard retail channels.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              },
+              "plays": 1
+            },
+            {
+              "rank": 10,
+              "artist": "David Allan Coe",
+              "song": "Fuckin' in the Butt",
+              "basis": "Historically notable controversial/adult-content David Allan Coe catalog entry; titles are preserved as sourced and lyrics are excluded.",
+              "sourceUrls": [
+                "https://en.wikipedia.org/wiki/Underground_Album",
+                "https://people.com/david-allan-coe-dead-8712058",
+                "https://ew.com/david-allan-coe-dead-controversial-country-singer-11961938"
+              ],
+              "metadataStatus": "manual_historical_metadata",
+              "metadataMatch": {
+                "status": "manual_source_entry",
+                "source": "underground_album_wikipedia",
+                "confidence": 1,
+                "notes": [
+                  "Track title and album placement were manually entered from public album track listings.",
+                  "No lyric text, audio links, or streaming/download links are included."
+                ],
+                "matchedTrackName": "Fuckin' in the Butt",
+                "matchedArtistName": "David Allan Coe"
+              },
+              "album": {
+                "name": "Underground Album",
+                "censoredName": "Underground Album",
+                "collectionId": null,
+                "collectionViewUrl": null,
+                "releaseDate": "1982",
+                "trackNumber": 10,
+                "trackCount": 10,
+                "discNumber": 1,
+                "discCount": 1,
+                "primaryGenreName": "Country",
+                "country": "USA",
+                "explicitness": "explicit",
+                "durationMs": 131000,
+                "previewUrl": null,
+                "trackViewUrl": null,
+                "writer": "David Allan Coe"
+              },
+              "albumArt": {
+                "source": null,
+                "url100": null,
+                "url600": null,
+                "url1200": null,
+                "coverArtArchiveUrl": null
+              },
+              "artistDetails": {
+                "name": "David Allan Coe",
+                "type": "Person",
+                "country": "USA",
+                "beginDate": "1939-09-06",
+                "endDate": "2026-04-29",
+                "disambiguation": "American outlaw country singer-songwriter",
+                "itunesArtistId": null,
+                "itunesArtistViewUrl": null,
+                "musicBrainzArtistId": null,
+                "musicBrainzUrl": null
+              },
+              "contentWarnings": [
+                "adult/explicit content",
+                "historical/offensive-content context",
+                "uncensored explicit title",
+                "adult/sexual-theme title"
+              ],
+              "historicalContext": {
+                "includedFor": "historical cataloging of controversial/adult-content material",
+                "racismSpecificEntry": false,
+                "containsUncensoredOffensiveTitle": true,
+                "containsRacialSlurInTitle": false,
+                "lyricsIncluded": false,
+                "audioOrStreamingLinksIncluded": false
+              },
+              "songFacts": {
+                "status": "manual_source_backed",
+                "targetFactCount": 3,
+                "sentenceRule": "Each fact is one sentence.",
+                "facts": [
+                  "This song appears as track 10 on Underground Album.",
+                  "The album was independently distributed through mail order and live-show merchandise rather than standard retail channels.",
+                  "The entry is included for cataloging context only and does not include lyrics or audio links."
+                ],
+                "source": "https://en.wikipedia.org/wiki/Underground_Album",
+                "review": {
+                  "needsReview": true,
+                  "reason": "Controversial/adult-content metadata should be reviewed before public display."
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

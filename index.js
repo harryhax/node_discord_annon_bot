@@ -8,9 +8,27 @@ import {
   EmbedBuilder
 } from "discord.js";
 import "dotenv/config";
+import {
+  colourRoleCommand,
+  handleColourRoleInteraction
+} from "./modules/colourRole.js";
+import {
+  handleTuneGameArtists,
+  handleTuneGameDecades,
+  handleTuneGameGenres,
+  handleTuneGameStart,
+  handleTuneGameStats,
+  handleTuneGameStop,
+  tuneGameCommand
+} from "./modules/tuneGame.js";
 
 const client = new Client({
-  intents: [GatewayIntentBits.Guilds]
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildVoiceStates,
+    GatewayIntentBits.MessageContent
+  ]
 });
 
 /* ============================
@@ -26,7 +44,9 @@ const commands = [
         .setName("message")
         .setDescription("Anonymous message")
         .setRequired(true)
-    )
+    ),
+  tuneGameCommand,
+  colourRoleCommand
 ].map(c => c.toJSON());
 
 /* ============================
@@ -60,6 +80,47 @@ client.once(Events.ClientReady, async () => {
 
 client.on(Events.InteractionCreate, async interaction => {
   if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === "tunegame") {
+    const subcommand = interaction.options.getSubcommand();
+
+    if (subcommand === "start") {
+      await handleTuneGameStart(interaction);
+      return;
+    }
+
+    if (subcommand === "stop") {
+      await handleTuneGameStop(interaction);
+      return;
+    }
+
+    if (subcommand === "genres") {
+      await handleTuneGameGenres(interaction);
+      return;
+    }
+
+    if (subcommand === "decades") {
+      await handleTuneGameDecades(interaction);
+      return;
+    }
+
+    if (subcommand === "artists") {
+      await handleTuneGameArtists(interaction);
+      return;
+    }
+
+    if (subcommand === "stats") {
+      await handleTuneGameStats(interaction);
+      return;
+    }
+
+    return;
+  }
+
+  if (interaction.commandName === "colourrole") {
+    await handleColourRoleInteraction(interaction);
+    return;
+  }
   if (interaction.commandName !== "anon") return;
 
   const message = interaction.options.getString("message");
