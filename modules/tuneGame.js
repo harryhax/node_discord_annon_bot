@@ -2,22 +2,15 @@ import fs from "node:fs/promises";
 import { randomInt as cryptoRandomInt } from "node:crypto";
 import { AttachmentBuilder, EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import {
-  AudioPlayerStatus,
-  NoSubscriberBehavior,
-  StreamType,
-  VoiceConnectionStatus,
-  createAudioPlayer,
-  createAudioResource,
-  entersState,
-  joinVoiceChannel
-} from "@discordjs/voice";
-import {
   createRandomSongClip,
   downloadSongMp3,
   incrementSongPlayCount,
   loadSongsCatalog
 } from "./downloader.js";
 import { getGuildLeaderboard, recordGameResult } from "./tuneGameStats.js";
+import { VoiceSession } from "./tuneGameVoice.js";
+import { synthesizeTts } from "./tuneGameTts.js";
+import { bakeOverlaysIntoClip } from "./tuneGameMixer.js";
 
 const ROUND_TIME_SECONDS = Number(process.env.TUNEGAME_ROUND_SECONDS || "60");
 const ROUND_TIME_MS = ROUND_TIME_SECONDS * 1000;
@@ -26,9 +19,6 @@ const HINT_INTERVAL_MS = Math.max(1000, Math.floor(ROUND_TIME_MS / (HINT_COUNT +
 const TUNEGAME_VOICE_CHANNEL_ID =
   process.env.TUNEGAME_VOICE_CHANNEL_ID || "1013871528380727362";
 const DEFAULT_TOTAL_QUESTIONS = 10;
-const DEFAULT_CLIP_DURATION_SECONDS = Number(
-  process.env.TUNEGAME_CLIP_DURATION_SECONDS || "10"
-);
 const RECENT_SONG_HISTORY_LIMIT = Number(
   process.env.TUNEGAME_RECENT_HISTORY_LIMIT || "200"
 );
@@ -465,7 +455,7 @@ function makeHintList(song) {
   const nonFactHints = [];
 
   if (song.artist) {
-    nonFactHints.push(`Artist: ${song.artist}`);
+    nonFactHints.push(`${song.artist}`);
   }
 
   if (song.albumName) {
@@ -473,7 +463,7 @@ function makeHintList(song) {
   }
 
   for (const fact of song.facts || []) {
-    factHints.push(`Fact: ${fact}`);
+    factHints.push(`${fact}`);
   }
 
   const titleHint = `Title: ${maskSongTitle(song.title)}`;
@@ -670,17 +660,27 @@ async function runSingleRound(gameState, song, roundNumber) {
 
   if (gameState.stopRequested) return { stopped: true };
 
-  const { filePath: downloadedFilePath, youtubeUrl } = await downloadSongMp3({
+  // Kick off the download immediately so it can run while we announce the question.
+  const downloadPromise = downloadSongMp3({
     artist: song.artist,
     title: song.title,
     logger: console
   });
 
+  // Announce the upcoming question over voice while the download is in flight.
+  const introParts = [`Question ${roundNumber} of ${gameState.totalQuestions}.`];
+  if (song.genre) introParts.push(`Genre, ${song.genre}.`);
+  if (song.era) introParts.push(`Era, ${song.era}.`);
+  introParts.push("Get ready... here comes your tune!");
+  await gameState.voice.speakTts(introParts.join(" "));
+
+  const { filePath: downloadedFilePath, youtubeUrl } = await downloadPromise;
+
   let clipFilePath;
   try {
     const clipResult = await createRandomSongClip({
       inputFilePath: downloadedFilePath,
-      clipDurationSeconds: DEFAULT_CLIP_DURATION_SECONDS,
+      clipDurationSeconds: ROUND_TIME_SECONDS,
       logger: console
     });
     clipFilePath = clipResult.clipFilePath;
@@ -689,7 +689,42 @@ async function runSingleRound(gameState, song, roundNumber) {
     throw error;
   }
 
+  // Pre-render hint TTS audio and bake them into a single mixed clip mp3.
+  const hints = makeHintList(song);
+  const playableHints = hints.slice(0, HINT_COUNT);
+  let bakedClipFilePath = clipFilePath;
+  const hintTtsFiles = [];
+  try {
+    const ttsPaths = await Promise.all(
+      playableHints.map((hint, index) =>
+        synthesizeTts(`Hint ${index + 1}. ${hint}`)
+      )
+    );
+    const overlays = ttsPaths
+      .map((filePath, index) => filePath ? {
+        filePath,
+        offsetMs: HINT_INTERVAL_MS * (index + 1)
+      } : null)
+      .filter(Boolean);
+    overlays.forEach(o => hintTtsFiles.push(o.filePath));
+
+    if (overlays.length > 0) {
+      const bakedPath = clipFilePath.replace(/\.mp3$/i, ".mixed.mp3");
+      await bakeOverlaysIntoClip({
+        baseFilePath: clipFilePath,
+        overlays,
+        outputFilePath: bakedPath
+      });
+      bakedClipFilePath = bakedPath;
+    }
+  } catch (error) {
+    console.warn("[tuneGame] Failed to bake hint TTS into clip:", error.message);
+  }
+
   gameState.activeRoundFiles = [downloadedFilePath, clipFilePath];
+  if (bakedClipFilePath !== clipFilePath) {
+    gameState.activeRoundFiles.push(bakedClipFilePath);
+  }
 
   if (gameState.stopRequested) {
     await cleanupRoundFiles(gameState);
@@ -698,7 +733,7 @@ async function runSingleRound(gameState, song, roundNumber) {
 
   const embed = buildRoundPromptEmbed(song, roundNumber, gameState.totalQuestions);
 
-  const attachment = new AttachmentBuilder(clipFilePath, {
+  const attachment = new AttachmentBuilder(bakedClipFilePath, {
     name: `tunegame-round-${roundNumber}.mp3`
   });
 
@@ -707,17 +742,15 @@ async function runSingleRound(gameState, song, roundNumber) {
     files: [attachment]
   });
 
-  await playClipInVoice(gameState, clipFilePath);
+  await gameState.voice.playClip(bakedClipFilePath);
 
-  const hints = makeHintList(song);
   gameState.roundSolved = false;
   gameState.currentPoints = HINT_COUNT;
-  gameState.activeHintTimers = hints.slice(0, HINT_COUNT).map((hint, index) =>
+  gameState.activeHintTimers = playableHints.map((hint, index) =>
     setTimeout(() => {
-      if (!gameState.stopRequested && !gameState.roundSolved) {
-        gameState.currentPoints = Math.max(1, HINT_COUNT - index - 1);
-        sendRoundMessage(`Hint ${index + 1}: ${hint}`).catch(() => {});
-      }
+      if (gameState.stopRequested || gameState.roundSolved) return;
+      gameState.currentPoints = Math.max(1, HINT_COUNT - index - 1);
+      sendRoundMessage(`Hint ${index + 1}: ${hint}`).catch(() => {});
     }, HINT_INTERVAL_MS * (index + 1))
   );
 
@@ -760,6 +793,7 @@ async function runSingleRound(gameState, song, roundNumber) {
   });
 
   clearHintTimers(gameState);
+  gameState.voice.stopClip();
   await cleanupRoundFiles(gameState);
 
   if (result.stopped) {
@@ -772,6 +806,9 @@ async function runSingleRound(gameState, song, roundNumber) {
     await sendRoundMessage({
       embeds: [buildSongResultEmbed(song, result.winner.username, youtubeUrl, pointsAwarded)]
     });
+    gameState.voice.speakTts(
+      `${result.winner.username} got it! ${song.title} by ${song.artist}. ${pointsAwarded} point${pointsAwarded === 1 ? "" : "s"}!`
+    ).catch(() => {});
     return {
       winnerId: result.winner.id,
       roundNumber,
@@ -785,6 +822,9 @@ async function runSingleRound(gameState, song, roundNumber) {
   await sendRoundMessage({
     embeds: [buildSongResultEmbed(song, null, youtubeUrl)]
   });
+  gameState.voice.speakTts(
+    `Time's up! The answer was ${song.title} by ${song.artist}.`
+  ).catch(() => {});
 
   return {
     winnerId: null,
@@ -794,81 +834,6 @@ async function runSingleRound(gameState, song, roundNumber) {
     youtubeUrl,
     roundMessageIds
   };
-}
-
-async function joinGameVoiceChannel(gameState, guild) {
-  try {
-    const voiceChannel = await guild.channels.fetch(TUNEGAME_VOICE_CHANNEL_ID);
-    if (!voiceChannel || !voiceChannel.isVoiceBased()) {
-      console.warn(`[tuneGame] Voice channel ${TUNEGAME_VOICE_CHANNEL_ID} not found or not voice-based.`);
-      return;
-    }
-
-    const connection = joinVoiceChannel({
-      channelId: voiceChannel.id,
-      guildId: guild.id,
-      adapterCreator: guild.voiceAdapterCreator,
-      selfDeaf: false,
-      selfMute: false
-    });
-
-    const player = createAudioPlayer({
-      behaviors: { noSubscriber: NoSubscriberBehavior.Play }
-    });
-
-    connection.subscribe(player);
-
-    try {
-      await entersState(connection, VoiceConnectionStatus.Ready, 15_000);
-    } catch (error) {
-      console.warn("[tuneGame] Voice connection failed to become ready:", error.message);
-      try { connection.destroy(); } catch {}
-      return;
-    }
-
-    gameState.voiceConnection = connection;
-    gameState.audioPlayer = player;
-  } catch (error) {
-    console.warn("[tuneGame] Failed to join voice channel:", error.message);
-  }
-}
-
-async function playClipInVoice(gameState, clipFilePath) {
-  const player = gameState.audioPlayer;
-  if (!player) return;
-
-  try {
-    const resource = createAudioResource(clipFilePath, { inputType: StreamType.Arbitrary });
-    player.play(resource);
-    await entersState(player, AudioPlayerStatus.Playing, 5_000).catch(() => {});
-  } catch (error) {
-    console.warn("[tuneGame] Failed to play clip in voice:", error.message);
-  }
-}
-
-function teardownVoice(gameState) {
-  const player = gameState.audioPlayer;
-  const connection = gameState.voiceConnection;
-
-  gameState.audioPlayer = null;
-  gameState.voiceConnection = null;
-
-  try {
-    player?.stop(true);
-  } catch {}
-
-  if (!connection) return;
-
-  try {
-    if (connection.state.status !== VoiceConnectionStatus.Destroyed) {
-      try {
-        connection.disconnect();
-      } catch {}
-      connection.destroy();
-    }
-  } catch (error) {
-    console.warn("[tuneGame] Failed to teardown voice connection:", error.message);
-  }
 }
 
 async function finishGame(gameState, reason) {
@@ -885,7 +850,21 @@ async function finishGame(gameState, reason) {
 
   await cleanupRoundFiles(gameState);
 
-  teardownVoice(gameState);
+  const winners = getGameWinners(gameState);
+  let outroLine;
+  if (reason === "stopped") {
+    outroLine = "That's a wrap! The game has been stopped. Thanks for playing!";
+  } else if (winners.length === 1) {
+    const champ = gameState.scores.get(winners[0].userId)?.username || "our champion";
+    outroLine = `That's the game! Our champion is ${champ} with ${winners[0].points} point${winners[0].points === 1 ? "" : "s"}! Well played, everyone!`;
+  } else if (winners.length > 1) {
+    outroLine = `It's a tie! Our champions share ${winners[0].points} point${winners[0].points === 1 ? "" : "s"} apiece. What a game!`;
+  } else {
+    outroLine = "That's the game! No correct guesses this time. Better luck next round!";
+  }
+  await gameState.voice.speakTts(outroLine);
+
+  gameState.voice.teardown();
 
   await deleteTrackedMessages(gameState);
 
@@ -998,13 +977,12 @@ export async function handleTuneGameStart(interaction) {
     roundSolved: false,
     stopRequested: false,
     finished: false,
-    voiceConnection: null,
-    audioPlayer: null
+    voice: new VoiceSession()
   };
 
   activeGamesByGuild.set(guildId, gameState);
 
-  await joinGameVoiceChannel(gameState, interaction.guild);
+  await gameState.voice.join(interaction.guild, TUNEGAME_VOICE_CHANNEL_ID);
 
   const activeFilters = [
     filters.genre ? `genre=${filters.genre}` : null,
@@ -1044,6 +1022,10 @@ export async function handleTuneGameStart(interaction) {
     );
 
   await sendTrackedMessage(gameState, { embeds: [startEmbed] });
+
+  await gameState.voice.speakTts(
+    `Welcome to Tune Game! ${totalQuestions} question${totalQuestions === 1 ? "" : "s"}, ${ROUND_TIME_SECONDS} seconds each. Faster guesses score more points. Let's play!`
+  );
 
   try {
     const playedSongs = [];
@@ -1097,6 +1079,8 @@ export async function handleTuneGameStart(interaction) {
             `Skipping song due to round preparation failure: ${song.artist} - ${song.title}`,
             error
           );
+          // Make sure any partial round files are cleaned up.
+          await cleanupRoundFiles(gameState).catch(() => {});
         }
       }
 

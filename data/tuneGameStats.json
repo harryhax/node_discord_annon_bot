@@ -1,16 +1,24 @@
 {
   "guilds": {
     "1013871528380727356": {
-      "gamesPlayed": 2,
-      "lastPlayedAt": "2026-05-03T00:00:38.990Z",
+      "gamesPlayed": 5,
+      "lastPlayedAt": "2026-05-03T00:31:32.028Z",
       "players": {
         "1013648736351690823": {
           "username": "footjuse",
-          "totalPoints": 22,
-          "gamesPlayed": 2,
-          "gamesWon": 2,
-          "bestScore": 12,
-          "lastPlayedAt": "2026-05-03T00:00:38.990Z"
+          "totalPoints": 51,
+          "gamesPlayed": 5,
+          "gamesWon": 5,
+          "bestScore": 14,
+          "lastPlayedAt": "2026-05-03T00:31:32.028Z"
+        },
+        "804372506425032745": {
+          "username": "soulshinebabe",
+          "totalPoints": 4,
+          "gamesPlayed": 1,
+          "gamesWon": 0,
+          "bestScore": 4,
+          "lastPlayedAt": "2026-05-03T00:08:11.389Z"
         }
       }
     }
