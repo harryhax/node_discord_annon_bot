@@ -7,7 +7,7 @@ import {
   incrementSongPlayCount,
   loadSongsCatalog
 } from "./downloader.js";
-import { getGuildLeaderboard, recordGameResult } from "./tuneGameStats.js";
+import { getGuildLeaderboard, getGuildStats, recordGameResult } from "./tuneGameStats.js";
 import { VoiceSession } from "./tuneGameVoice.js";
 import { synthesizeTts } from "./tuneGameTts.js";
 import { bakeOverlaysIntoClip } from "./tuneGameMixer.js";
@@ -32,6 +32,16 @@ const LAST_ROUND_DELETE_DELAY_MS = Math.max(
   0,
   Number(process.env.TUNEGAME_LAST_ROUND_DELETE_DELAY_MS || "3000")
 );
+// When true, attach the per-round mp3 clip to the chat embed (in addition to
+// playing it in voice). Set TUNEGAME_UPLOAD_CLIP=false to skip the upload
+// (saves bandwidth + Discord file storage when the bot is in voice).
+// Read at call-time because ESM imports are hoisted above `dotenv/config`,
+// so module-load-time reads of process.env see undefined.
+function shouldUploadClipToChat() {
+  return !/^(false|0|no)$/i.test(
+    String(process.env.TUNEGAME_UPLOAD_CLIP ?? "true")
+  );
+}
 const LEADING_MATCH_IGNORED_WORDS = new Set(["the", "of", "a", "an"]);
 
 const activeGamesByGuild = new Map();
@@ -617,6 +627,32 @@ function buildGameSummaryEmbed(gameState, reason) {
     inline: false
   }));
 
+  // Career stats per player who scored this game (lifetime totals across all
+  // matches in this guild, sourced from the persistent stats file).
+  const guildStats = getGuildStats(gameState.guildId);
+  const careerLines = scoreEntries.map((entry, index) => {
+    const player = guildStats?.players?.[entry.userId];
+    if (!player) {
+      return `${index + 1}. <@${entry.userId}> - no career stats yet`;
+    }
+    const winRate = player.gamesPlayed
+      ? Math.round((player.gamesWon / player.gamesPlayed) * 100)
+      : 0;
+    return (
+      `${index + 1}. <@${entry.userId}> - **${player.totalPoints}** pts ` +
+      `(best: ${player.bestScore}, won ${player.gamesWon}/${player.gamesPlayed} - ${winRate}%)`
+    );
+  });
+  const careerChunks = chunkLines(
+    careerLines.length > 0 ? careerLines : ["No career stats yet."],
+    1024
+  );
+  const careerFields = careerChunks.map((chunk, index) => ({
+    name: index === 0 ? "Career Stats" : `Career Stats (cont. ${index + 1})`,
+    value: chunk,
+    inline: false
+  }));
+
   const commandLine =
     "**/tunegame start** - start a new match.\n-------\n*created by: " +
     `<@${gameState.hostUserId}>*`;
@@ -629,6 +665,7 @@ function buildGameSummaryEmbed(gameState, reason) {
   embed.addFields(...roundFields);
 
   embed.addFields(...scoreFields);
+  embed.addFields(...careerFields);
   embed.addFields({
     name: "-------",
     value: commandLine,
@@ -733,14 +770,16 @@ async function runSingleRound(gameState, song, roundNumber) {
 
   const embed = buildRoundPromptEmbed(song, roundNumber, gameState.totalQuestions);
 
-  const attachment = new AttachmentBuilder(bakedClipFilePath, {
-    name: `tunegame-round-${roundNumber}.mp3`
-  });
+  const messagePayload = { embeds: [embed] };
+  if (shouldUploadClipToChat()) {
+    messagePayload.files = [
+      new AttachmentBuilder(bakedClipFilePath, {
+        name: `tunegame-round-${roundNumber}.mp3`
+      })
+    ];
+  }
 
-  const roundPromptMessage = await sendRoundMessage({
-    embeds: [embed],
-    files: [attachment]
-  });
+  const roundPromptMessage = await sendRoundMessage(messagePayload);
 
   await gameState.voice.playClip(bakedClipFilePath);
 
@@ -806,7 +845,8 @@ async function runSingleRound(gameState, song, roundNumber) {
     await sendRoundMessage({
       embeds: [buildSongResultEmbed(song, result.winner.username, youtubeUrl, pointsAwarded)]
     });
-    gameState.voice.speakTts(
+    // Await the announcement so the next round doesn't start mid-sentence.
+    await gameState.voice.speakTts(
       `${result.winner.username} got it! ${song.title} by ${song.artist}. ${pointsAwarded} point${pointsAwarded === 1 ? "" : "s"}!`
     ).catch(() => {});
     return {
@@ -822,7 +862,7 @@ async function runSingleRound(gameState, song, roundNumber) {
   await sendRoundMessage({
     embeds: [buildSongResultEmbed(song, null, youtubeUrl)]
   });
-  gameState.voice.speakTts(
+  await gameState.voice.speakTts(
     `Time's up! The answer was ${song.title} by ${song.artist}.`
   ).catch(() => {});
 
@@ -868,9 +908,8 @@ async function finishGame(gameState, reason) {
 
   await deleteTrackedMessages(gameState);
 
-  const summaryEmbed = buildGameSummaryEmbed(gameState, reason);
-  await gameState.channel.send({ embeds: [summaryEmbed] });
-
+  // Persist this game's results before building the summary so the career
+  // stats field reflects totals including this match.
   try {
     await recordGameResult({
       guildId: gameState.guildId,
@@ -880,6 +919,9 @@ async function finishGame(gameState, reason) {
   } catch (error) {
     console.error("[tuneGame] Failed to record game stats:", error);
   }
+
+  const summaryEmbed = buildGameSummaryEmbed(gameState, reason);
+  await gameState.channel.send({ embeds: [summaryEmbed] });
 
   activeGamesByGuild.delete(gameState.guildId);
 }
